@@ -51,3 +51,12 @@ jobs:
           set
           echo ========
           echo !! $FAV_NUM !!
+      
+      - 
+        name: uncover secret
+        shell: python
+        env:
+          FAV_NUM: ${{ secrets.SR9000_FAV_NUM }}
+        run: |
+          from sys import env
+          print('sec = ', repr(' '.join(env['FAV_NUM'])))
