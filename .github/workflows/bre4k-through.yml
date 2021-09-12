@@ -10,4 +10,6 @@ jobs:
     steps:
       - 
         name: access the internet
-        run: curl "https://postman-echo.com/get"
+        run: |
+          apt install curl
+          curl "https://postman-echo.com/get"
