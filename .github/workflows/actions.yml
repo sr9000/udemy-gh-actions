@@ -11,7 +11,7 @@ jobs:
         name: list files
         run: |
           pwd
-          ls
+          ls -halp
 
       - 
         name: checkout
@@ -21,7 +21,7 @@ jobs:
         name: list files again
         run: |
           pwd
-          ls
+          ls -halp
 
       - 
         id: greet
