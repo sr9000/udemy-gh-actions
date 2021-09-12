@@ -6,10 +6,8 @@ on:
 jobs:
   hide-n-seek:
     runs-on: ubuntu-latest
-    container: ubuntu:20.04
+    container: curlimages/curl:latest
     steps:
       - 
         name: access the internet
-        run: |
-          apt install curl
-          curl "https://postman-echo.com/get"
+        run: curl "https://postman-echo.com/get"
