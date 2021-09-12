@@ -8,12 +8,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - 
+        name: list files
+        run: |
+          pwd
+          ls
+
+      - 
         id: greet
         name: smpl-js-act
         uses: actions/hello-world-javascript-action@v1
         with:
           who-to-greet: John
-      
+
       - 
         name: log greeting time
         run: echo "${{ steps.greet.outputs.time }}"
