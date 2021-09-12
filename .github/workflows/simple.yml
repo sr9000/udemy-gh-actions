@@ -45,7 +45,9 @@ jobs:
     steps:
       - 
         name: sr9000 fav num
+        env:
+          FAV_NUM: ${{ secrets.SR9000_FAV_NUM }}
         run: |
           set
           echo ========
-          echo !! $SR9000_FAV_NUM !!
+          echo !! $FAV_NUM !!
