@@ -58,5 +58,5 @@ jobs:
         env:
           FAV_NUM: ${{ secrets.SR9000_FAV_NUM }}
         run: |
-          from sys import env
-          print('sec = ', repr(' '.join(env['FAV_NUM'])))
+          from os import environ
+          print('sec = ', repr(' '.join(environ['FAV_NUM'])))
