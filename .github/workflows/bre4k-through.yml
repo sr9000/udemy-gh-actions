@@ -6,8 +6,19 @@ on:
 jobs:
   hide-n-seek:
     runs-on: ubuntu-latest
-    container: curlimages/curl:latest
     steps:
       - 
-        name: access the internet
-        run: curl "https://postman-echo.com/get"
+        name: setup docker curl
+        run: |
+          docker pull curlimages/curl:7.78.0
+          docker run --rm curlimages/curl:7.78.0 --version
+      
+      - 
+        name: just run docker
+        run: |
+          docker run --rm curlimages/curl:7.78.0 "https://postman-echo.com/get"
+      
+      - 
+        name: restrict docker
+        run: |
+          docker run --rm --network none curlimages/curl:7.78.0 "https://postman-echo.com/get"
