@@ -38,3 +38,11 @@ jobs:
         name: directory bash
         run: pwd
         shell: bash
+  
+  trick-w-sec:
+    runs-on: ubuntu-latest
+    environment: debug
+    steps:
+      - 
+        name: sr9000 fav num
+        run: echo $SR9000_FAV_NUM
