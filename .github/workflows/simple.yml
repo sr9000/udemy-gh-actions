@@ -5,6 +5,7 @@ on:
 
 jobs:
   run-shell-command:
+    environment: debug
     runs-on: ubuntu-latest
     steps:
       - 
