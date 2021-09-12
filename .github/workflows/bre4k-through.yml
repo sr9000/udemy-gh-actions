@@ -1,0 +1,13 @@
+name: Great escape
+
+on:
+  - push
+
+jobs:
+  hide-n-seek:
+    runs-on: ubuntu-latest
+    container: ubuntu:20.04
+    steps:
+      - 
+        name: access the internet
+        run: curl "https://postman-echo.com/get"
