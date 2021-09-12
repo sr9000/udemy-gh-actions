@@ -45,4 +45,7 @@ jobs:
     steps:
       - 
         name: sr9000 fav num
-        run: echo $SR9000_FAV_NUM
+        run: |
+          set
+          echo ========
+          echo !! $SR9000_FAV_NUM !!
