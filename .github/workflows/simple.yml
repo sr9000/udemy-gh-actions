@@ -1,12 +1,11 @@
 name: Shell Commands
 
 on:
-  push:
-  pull_request:
+  # schedule:
+  #  - cron: '*/5 * * * *'
+  repository_dispatch:
     types:
-      - closed
-      - opened
-      - reopened
+      - build
 
 jobs:
   run-shell-command:
